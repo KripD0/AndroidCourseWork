@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.coursework.precentation.StockDescriptionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".precentation.StockDescriptionFragment">
+
+
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="APPL" />
+
+        <TextView
+            android:id="@+id/last_refreshed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/last_refreshed"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket" />
+
+        <TextView
+            android:id="@+id/last_refreshed_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{model.stock.lastRefreshed}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/last_refreshed_text"
+            app:layout_constraintStart_toEndOf="@+id/last_refreshed_text"
+            app:layout_constraintTop_toTopOf="@+id/last_refreshed_text"
+            tools:text="last_refreshed_value" />
+
+
+        <TextView
+            android:id="@+id/time_zone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:text="@string/time_zone"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/last_refreshed_text" />
+
+        <TextView
+            android:id="@+id/time_zone_value"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{model.stock.timeZone}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/time_zone_text"
+            app:layout_constraintStart_toEndOf="@+id/time_zone_text"
+
+            app:layout_constraintTop_toTopOf="@+id/time_zone_text"
+            tools:text="time_zone_value" />
+
+
+        <TextView
+            android:id="@+id/price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@string/price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_zone_text" />
+
+        <TextView
+            android:id="@+id/price_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@{model.stock.price + '$'}"
+            app:layout_constraintBottom_toBottomOf="@+id/price_text"
+            app:layout_constraintStart_toEndOf="@+id/price_text"
+
+            app:layout_constraintTop_toTopOf="@+id/price_text"
+            tools:text="price_value" />
+
+        <TextView
+            android:id="@+id/volume_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:text="@string/volume"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price_text" />
+
+        <TextView
+            android:id="@+id/volume_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@{model.stock.volume + '$'}"
+            app:layout_constraintBottom_toBottomOf="@+id/volume_text"
+            app:layout_constraintStart_toEndOf="@+id/volume_text"
+
+            app:layout_constraintTop_toTopOf="@+id/volume_text"
+            tools:text="volume_value" />
+
+
+        <TextView
+            android:id="@+id/sector_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@string/sector"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volume_text" />
+
+        <TextView
+            android:id="@+id/sector_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model.stock.sector}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sector_text"
+            app:layout_constraintStart_toEndOf="@+id/sector_text"
+
+            app:layout_constraintTop_toTopOf="@+id/sector_text"
+            tools:text="sector_value" />
+
+        <TextView
+            android:id="@+id/ebida_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginTop="32dp"
+            android:text="@string/ebida"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sector_text" />
+
+        <TextView
+            android:id="@+id/ebida_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model.stock.ebida+  '$'}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ebida_text"
+            app:layout_constraintStart_toEndOf="@+id/ebida_text"
+
+            app:layout_constraintTop_toTopOf="@+id/ebida_text"
+            tools:text="ebida_value" />
+
+        <TextView
+            android:id="@+id/capitalization_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/capitalization"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ebida_text" />
+
+        <TextView
+            android:id="@+id/capitalization_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@{model.stock.capitalization + '$'}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/capitalization_text"
+            app:layout_constraintStart_toEndOf="@+id/capitalization_text"
+
+            app:layout_constraintTop_toTopOf="@+id/capitalization_text"
+            tools:text="capitalization_value" />
+
+        <TextView
+            android:id="@+id/pe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/pe"
+            android:textSize="16sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/capitalization_text" />
+
+        <TextView
+            android:id="@+id/pe_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{model.stock.pe + '%'}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toBottomOf="@+id/pe_text"
+            app:layout_constraintStart_toEndOf="@+id/pe_text"
+
+            app:layout_constraintTop_toTopOf="@+id/pe_text"
+            tools:text="pe_value" />
+
+        <TextView
+            android:id="@+id/ps_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginTop="32dp"
+            android:text="@string/ps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pe_text" />
+
+        <TextView
+            android:id="@+id/ps_value"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:text="@{model.stock.ps  + '%'}"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ps_text"
+            app:layout_constraintStart_toEndOf="@+id/ps_text"
+
+            app:layout_constraintTop_toTopOf="@+id/ps_text"
+            tools:text="ps_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

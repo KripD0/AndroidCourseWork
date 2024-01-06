@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/stocksFragment">
+
+
+    <fragment
+        android:id="@+id/stocksFragment"
+        android:name="com.example.coursework.precentation.StocksTopFragment"
+        />
+
+
+    <fragment
+        android:id="@+id/stocksDescriptionFragment"
+        android:name="com.example.coursework.precentation.StockDescriptionFragment"/>
+
+    <fragment
+        android:id="@+id/stocksFavoriteFragment"
+        android:name="com.example.coursework.precentation.StocksFavoriteFragment"/>
+
+
+</navigation>

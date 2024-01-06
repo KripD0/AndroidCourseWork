@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Мониторинг акций</string>
+    <string name="text_top">Лидеры роста, падения и наиболее активно торгуемые тикеры</string>
+    <string name="last_refreshed">Последнее обновление:</string>
+    <string name="time_zone">Временная зона:</string>
+    <string name="price">Цена:</string>
+    <string name="volume">Объем торгов:</string>
+    <string name="sector">Сектор:</string>
+    <string name="ebida">"Ebida: "</string>
+    <string name="capitalization">"Капитализация: "</string>
+    <string name="pe">"P/E: "</string>
+    <string name="ps">"P/S: "</string>
+    <string name="top">Топ</string>
+    <string name="favourites">Избранное</string>
+</resources>

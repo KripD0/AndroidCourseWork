@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Info Stocks</string>
+    <string name="text_top">Top Gainers, Losers, and Most Actively Traded Tickers</string>
+    <string name="last_refreshed">Last Refreshed:</string>
+    <string name="time_zone">Time zone:</string>
+    <string name="price">Price:</string>
+    <string name="volume">Volume:</string>
+    <string name="sector">Sector:</string>
+    <string name="ebida">"Ebida: "</string>
+    <string name="capitalization">"Capitalization: "</string>
+    <string name="pe">"P/E: "</string>
+    <string name="ps">"P/S: "</string>
+    <string name="top">топ</string>
+    <string name="favourites">"Favorite "</string>
+</resources>
